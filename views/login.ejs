@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>login form</title>
+		<link rel="stylesheet" href="/stylesheets/login.css" />
+		 <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="/frontJs/login.js"></script>
+	</head>
+
+	<body>
+		
+	
+<center>
+	<h1 id="title">login form</h1>
+    <form id="loginForm" action="/login" method="post">
+        <table width="400" id="loginTable">
+            <tr>
+                
+                <td><input type="text" name="id" id="id" size="30" maxlength="50" placeholder ="ID" /> <button type= 'button' id = 'IDCheck' >
+					IDCheck
+				</button> 
+				<span id = 'IDCheckResult' > </span>
+					<input type = hidden name = 'IDCheckResultCode' id = 'IDCheckResultCode' />
+				</td>
+				
+            </tr>
+            <tr>
+               
+                <td><input type="text" name="pw" id="pw" size="30" maxlength="50" placeholder ="PW"/></td>
+            </tr>
+			
+			
+            
+        </table>
+		
+		<input type = 'hidden' name = isLogin id = isLogin value ='1'/>
+		<button type="submit" form = "loginForm" id="submit" onclick = 'return checkAll();'> SUBMIT
+		</button>
+    </form>
+	
+</center>
+	</body>
+</html>

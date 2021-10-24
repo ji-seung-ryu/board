@@ -1,0 +1,24 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "axios": "^0.23.0",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "express-session": "^1.17.2",
+    "jquery": "^3.6.0",
+    "morgan": "~1.9.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
+    "pbkdf2-password": "^1.2.1",
+    "pool": "^0.4.1",
+    "serve-favicon": "~2.4.5"
+  }
+}

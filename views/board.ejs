@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= user %></title>
+        <link rel="stylesheet" href="/stylesheets/board.css" />
+
+        <script type="text/javascript">
+            if (window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.href);
+            }
+
+            function deleteCheck(name) {
+                if (name != '<%= user %>') {
+                    alert('삭제 권한이 없습니다.');
+                    return false;
+                }
+                if (confirm('삭제하시겠습니까?')) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            function updateCheck(name, num) {
+				console.log (name);
+				console.log ('<%= user%>');
+							 
+                if (name != '<%= user%>') {
+                    alert('수정 권한이 없습니다.');
+                    return false;
+                }
+				document.getElementById('update'.concat(num)).style.display = 'none';
+                document.getElementById('updateText'.concat(num)).style.display = 'inline';
+				document.getElementById('updateBtn'.concat(num)).style.display = 'inline';
+                return true;
+            }
+			
+			function call(){
+				alert ("call!")	;
+			}
+        </script>
+    </head>
+
+    <body>
+        <header id="header">
+            <p id="title">Hi <%= user %></p>
+            <div id="nav-right-items">
+                <form id="logout" action="/board" method="post">
+                    <input type="hidden" name="isLogout" id="isLogout" value="1" />
+
+                    <input type="submit" id="logout" value="logout" />
+                </form>
+            </div>
+        </header>
+
+        <% data.forEach(function(record){%>
+
+        <div id="user_info">
+            <%= record.name %>
+        </div>
+        <div id="comment">
+            <div id="sen"><%= record.sen %></div>
+
+            <input
+                type="button"
+                id="update<%=record.num %>"
+                onclick="updateCheck('<%=record.name%>','<%= record.num %>')" value="update"  style="display: inline;"/>
+			
+			<form id = "updateForm<%=record.num %>"
+				  action = "/board"
+				  method = "post"
+				  onsubmit = "call();"
+				  >
+				<input
+                type="text"
+                id="updateText<%=record.num %>"
+                name="updateText<%=record.num %>"
+                style="display: none;"
+            />
+				<input type="hidden" name="num" id="num" value="<%=record.num %>" />
+				<input type="hidden" name="name" id="name" value="<%=record.name %>" />
+				<input type="hidden" name="isUpdate" id="isUpdate" value="1" />
+				
+				<button type="submit" form="updateForm<%=record.num %>" id="updateBtn<%=record.num %>" style="display: none;" >submit</button>
+			</form>
+            
+
+            <form
+                id="<%=record.num %>"
+                class="removeForm"
+                action="/board"
+                method="post"
+                onsubmit="return deleteCheck('<%= record.name %>');"
+            >
+                <input type="hidden" name="num" id="num" value="<%=record.num %>" />
+                <input type="hidden" name="name" id="name" value="<%=record.name %>" />
+                <input type="hidden" name="isRemove" id="isRemove" value="1" />
+                <!-- 여기서 사용자랑 댓글 입력자가 같은지 확인도 해주어야 함 -->
+
+                <button type="submit" form="<%=record.num %>" id="bt">remove</button>
+            </form>
+        </div>
+
+        <% }) %>
+
+        <form id="commentForm" action="/board" method="post">
+            <input type="hidden" name="name" id="name" value="<%= user %>" />
+            <input type="hidden" name="num" id="num" value="<%= data[data.length-1].num %>" />
+            <input type="hidden" name="isAdd" id="isAdd" value="1" />
+            <input
+                type="text"
+                name="sen"
+                id="sen"
+                size="30"
+                maxlength="50"
+                placeholder="sentence"
+            />
+
+            <input type="submit" id="submit" value="submit" />
+        </form>
+    </body>
+</html>
