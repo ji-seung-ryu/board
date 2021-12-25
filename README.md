@@ -24,11 +24,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ji-seung-ryu/login-board">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  
 
-<h3 align="center">project_title</h3>
+<h3 align="center">login-board</h3>
 
   <p align="center">
     로그인, 회원가입 기능이 있는 게시판 \ 
@@ -77,6 +75,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<img src="images/1.png" alt="Logo" width="80" height="80">
+<img src="images/2.png" alt="Logo" width="80" height="80">
+<img src="images/3.png" alt="Logo" width="80" height="80">
+<img src="images/4.png" alt="Logo" width="80" height="80">
+ 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
@@ -114,6 +117,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
   '''sh
   npm install express
   ```
+  
 ### Installation
 
 1. Clone the repo
