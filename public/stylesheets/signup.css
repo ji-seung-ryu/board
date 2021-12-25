@@ -96,6 +96,12 @@ a {
 	 transition: 0.5s;
 }
 
+td{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+
+}
 #signupTable {
     display: flex;
     justify-content: center;

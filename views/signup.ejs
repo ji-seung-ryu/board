@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>signup form</title>
-		<link rel="stylesheet" href="/stylesheets/signup.css" />
+		
 	</head>
 
 	<body>
@@ -12,10 +12,27 @@
 	<h1 id="title">signup form</h1>
     <form id="signupForm" action="/signup" method="post">
         <table width="400" id="signupTable">
-            <tr>
+           
+			 <tr>
                 
-                <td><input type="text" name="id" id="id" size="30" maxlength="50" placeholder ="ID" /></td>
+                <td><input type="text" name="id" id="id" size="30" maxlength="50" placeholder ="ID" /> </td>
+				
+			</tr>
+			<tr> 
+				<td>
+				 <button type= 'button' id = 'IDCheck' >
+					IDCheck
+				</button> 
+				</td>
+				</tr>
+			<tr>
+				<td>
+				<span id = 'IDCheckResult' > </span>
+					<input type = hidden name = 'IDCheckResultCode' id = 'IDCheckResultCode' value = 0 />
+				</td>
+				
             </tr>
+			
             <tr>
                
                 <td><input type="text" name="pw" id="pw" size="30" maxlength="50" placeholder ="PW"/></td>
@@ -28,10 +45,14 @@
             
         </table>
 		
-		<button type="submit" form = "signupForm" id="submit"> SUBMIT
+		<button type="submit" form = "signupForm" id="submit" onclick="return checkAll();"> SUBMIT
 		</button>
     </form>
 	
 </center>
+		<link rel="stylesheet" href="/stylesheets/signup.css" />
+		        <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+
+				<script type="text/javascript" src="../frontJs/check_signup.js"></script>
 	</body>
 </html>
