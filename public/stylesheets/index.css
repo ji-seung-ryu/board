@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login_btn {
+    height: 100px;
+    width: 100px;
+    background-color: #04aa6d;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+#login_btn:hover {
+    background: orange;
+    cursor: pointer;
+}
+#signup_btn {
+    height: 100px;
+    width: 100px;
+    background-color: #04aa6d;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+#signup_btn:hover {
+    background: orange;
+    cursor: pointer;
+}
