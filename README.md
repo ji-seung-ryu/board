@@ -75,10 +75,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="images/1.png" alt="Logo" width="700" height="400">
-<img src="images/2.png" alt="Logo" width="700" height="400">
-<img src="images/3.png" alt="Logo" width="700" height="400">
-<img src="images/4.png" alt="Logo" width="700" height="400">
+<img src="images/1.png" alt="index" width="700" height="400">
+you can go either login page or signup page
+<img src="images/2.png" alt="login" width="700" height="400">
+you can login + after login, you can go board page 
+<img src="images/3.png" alt="signup" width="700" height="400">
+you can signup + IDcheck button checks if id is duplicated
+<img src="images/4.png" alt="board" width="700" height="400">
+you can write, update, delete your comments NOT others 
  
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -114,7 +118,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
   ```
 
 * express
-  '''sh
+  ```sh
   npm install express
   ```
   
