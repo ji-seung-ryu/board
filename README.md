@@ -75,10 +75,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="images/1.png" alt="Logo" width="80" height="80">
-<img src="images/2.png" alt="Logo" width="80" height="80">
-<img src="images/3.png" alt="Logo" width="80" height="80">
-<img src="images/4.png" alt="Logo" width="80" height="80">
+<img src="images/1.png" alt="Logo" width="700" height="400">
+<img src="images/2.png" alt="Logo" width="700" height="400">
+<img src="images/3.png" alt="Logo" width="700" height="400">
+<img src="images/4.png" alt="Logo" width="700" height="400">
  
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
