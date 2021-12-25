@@ -1,7 +1,6 @@
-간단 소개
-로그인 기능이 있는 게시판
-
-사용법 
+git clone https://github.com/ji-seung-ryu/login-board.git
+cd login-board
+node app.js
 
 
 
