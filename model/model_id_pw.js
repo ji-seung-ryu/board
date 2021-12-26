@@ -1,5 +1,4 @@
-//var getConnection = require ('pool');
-var pool = require('./pool');
+var pool = require('../config/pool');
 const mysql = require('mysql2/promise');
 var bkfd2Password = require('pbkdf2-password');
 var hasher = bkfd2Password();

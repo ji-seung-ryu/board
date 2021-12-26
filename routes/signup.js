@@ -1,14 +1,14 @@
 var express = require('express');
-var dbHandler = require('../dbHandler');
+var model_id_pw = require('../model/model_id_pw');
 var router = express.Router();
 
 router.post('/', async function (req, res, next) {
     if (req.body.IDCheck) {
-        var result = await dbHandler.IDCheck(req);
+        var result = await model_id_pw.IDCheck(req);
         res.json({ result: result });
 		
     } else {
-        var result = await dbHandler.signUp(req);
+        var result = await model_id_pw.signUp(req);
         if (result == 0) {
             console.log('회원가입 성공');
             res.redirect('/');

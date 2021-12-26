@@ -1,4 +1,4 @@
-var pool = require('./pool');
+var pool = require('../config/pool');
 var total; 
 
 exports.state = async function () {
