@@ -181,7 +181,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 8514199@gmail.com
+
 [https://www.instagram.com/ji_seungg/?hl=ko](https://www.instagram.com/ji_seungg/?hl=ko)
+
 [https://github.com/ji-seung-ryu/login-board](https://github.com/ji-seung-ryu/login-board)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
