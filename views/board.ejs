@@ -4,41 +4,7 @@
         <title><%= user %></title>
         <link rel="stylesheet" href="../stylesheets/board.css" />
 
-        <script type="text/javascript">
-            if (window.history.replaceState) {
-                window.history.replaceState(null, null, window.location.href);
-            }
-
-            function deleteCheck(name) {
-                if (name != '<%= user %>') {
-                    alert('삭제 권한이 없습니다.');
-                    return false;
-                }
-                if (confirm('삭제하시겠습니까?')) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-
-            function updateCheck(name, num) {
-				console.log (name);
-				console.log ('<%= user%>');
-							 
-                if (name != '<%= user%>') {
-                    alert('수정 권한이 없습니다.');
-                    return false;
-                }
-				document.getElementById('update'.concat(num)).style.display = 'none';
-                document.getElementById('updateText'.concat(num)).style.display = 'inline';
-				document.getElementById('updateBtn'.concat(num)).style.display = 'inline';
-                return true;
-            }
-			
-			function call(){
-				alert ("call!")	;
-			}
-        </script>
+       
     </head>
 
     <body>
@@ -64,12 +30,11 @@
             <input
                 type="button"
                 id="update<%=record.num %>"
-                onclick="updateCheck('<%=record.name%>','<%= record.num %>')" value="update"  style="display: inline;"/>
+                onclick="updateCheck('<%=record.name%>','<%= user%>','<%= record.num %>')" value="update"  style="display: inline;"/>
 			
 			<form id = "updateForm<%=record.num %>"
 				  action = "/board"
 				  method = "post"
-				  onsubmit = "call();"
 				  >
 				<input
                 type="text"
@@ -90,7 +55,7 @@
                 class="removeForm"
                 action="/board"
                 method="post"
-                onsubmit="return deleteCheck('<%= record.name %>');"
+                onsubmit="return deleteCheck('<%= record.name %>', '<%= user %>');"
             >
                 <input type="hidden" name="num" id="num" value="<%=record.num %>" />
                 <input type="hidden" name="name" id="name" value="<%=record.name %>" />
@@ -118,5 +83,14 @@
 
             <input type="submit" id="submit" value="submit" />
         </form>
+		
+		 <script type="text/javascript">
+            if (window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.href);
+            }
+		
+        </script>
+		<script type = "text/javascript" src = "../frontJs/front_board.js"></script>
+		
     </body>
 </html>
