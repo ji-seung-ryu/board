@@ -29,7 +29,7 @@
 <h3 align="center">login-board</h3>
 
   <p align="center">
-    로그인, 회원가입 기능이 있는 게시판 \ 
+    로그인, 회원가입 기능이 있는 게시판
     <br />
     <a href="https://github.com/ji-seung-ryu/login-board"><strong>Explore the docs »</strong></a>
     <br />
